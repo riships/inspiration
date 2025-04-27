@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Inspiration {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId // MongoDB uses _id
+  title             String
+  description       String   
+  websiteLink       String
+  desktopScreenshotUrl String? // Optional
+  mobileScreenshotUrl  String? // Optional
+  colorScheme       String? // Optional (could also be array if you want multiple colors)
+  fonts             String[] // Array of fonts
+  techStack         String[] // Array of technologies
+  categories        String[] // Array of categories (Landing Page, etc.)
+  niche             String?
+  slug              String   @unique // Unique slug
+  metaTitle         String?
+  metaDescription   String?
+  pageViews         Int      @default(0) // Default page views
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
