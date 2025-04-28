@@ -1,20 +1,25 @@
-import prisma from 'prismaClient.js';
+import prisma from '../prismaClient.js';
 
 export const createInspiration = async (data) => {
     try {
         // Validate the data before creating
+        if (!data) {
+            return { success: false, message: 'Data is required' };
+        }
+
         if (!data.title) {
-            throw new Error('Title and content are required');
+            return { success: false, message: 'Title is required' };
         }
         if (!data.description) {
-            throw new Error('Description is required');
+            return { success: false, message: 'Description is required' };
         }
         if (data.description.length > 300) {
-            throw new Error('Description cannot exceed 300 characters');
+            return { success: false, message: 'Description should not exceed 300 characters' };
         }
         if (!data.websiteLink) {
-            throw new Error('Website URL is required');
+            return { success: false, message: 'Website link is required' };
         }
+
         // Check if the inspiration already exists
         const existingInspiration = await prisma.inspiration.findUnique({
             where: {
@@ -22,20 +27,16 @@ export const createInspiration = async (data) => {
             },
         });
         if (existingInspiration) {
-            throw new Error('Inspiration with this title already exists');
+            return { success: false, message: 'Inspiration with this title already exists' };
         }
-        // Create the new inspiration
-        // Assuming data contains the necessary fields for creating an inspiration
-        // Adjust the data object as per your schema
+
+        // Adjust the data object as per your schema and create the inspiration
         const inspiration = await prisma.inspiration.create({
             data,
         });
-        return inspiration;
+
+        return { success: true, data: inspiration };
     } catch (error) {
-        throw new Error('Error creating inspiration: ' + error.message);
+        return { success: false, message: 'An error occurred while creating inspiration', error: error.message || error };
     }
-}
-
-
-
-
+};

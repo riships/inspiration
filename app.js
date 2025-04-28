@@ -1,5 +1,6 @@
 import express, { urlencoded } from 'express';
 import LinkExtractorRouter from './routes/Extractor.routes.js';
+import InspirationsRouter from './routes/Inspirations.routes.js';
 
 const app = express();
 app.use(express.json());
@@ -10,6 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', LinkExtractorRouter);
+app.use('/api', InspirationsRouter);
 
 
 

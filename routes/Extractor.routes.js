@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { LinkExtractor } from "../controller/LinkExtractor.contrller.js";
+import { LinkExtractor } from "../controller/LinkExtractor.controller.js";
 const router = Router();
 
 router.post("/extract-links", LinkExtractor);
