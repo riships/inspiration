@@ -20,16 +20,6 @@ export const createInspiration = async (data) => {
             return { success: false, message: 'Website link is required' };
         }
 
-        // Check if the inspiration already exists
-        const existingInspiration = await prisma.inspiration.findUnique({
-            where: {
-                title: data.title,
-            },
-        });
-        if (existingInspiration) {
-            return { success: false, message: 'Inspiration with this title already exists' };
-        }
-
         // Adjust the data object as per your schema and create the inspiration
         const inspiration = await prisma.inspiration.create({
             data,

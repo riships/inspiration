@@ -848,8 +848,8 @@ export namespace Prisma {
     title: string | null
     description: string | null
     websiteLink: string | null
-    desktopScreenshot: string | null
-    mobileScreenshot: string | null
+    desktopScreenshotUrl: string | null
+    mobileScreenshotUrl: string | null
     colorScheme: string | null
     niche: string | null
     slug: string | null
@@ -865,8 +865,8 @@ export namespace Prisma {
     title: string | null
     description: string | null
     websiteLink: string | null
-    desktopScreenshot: string | null
-    mobileScreenshot: string | null
+    desktopScreenshotUrl: string | null
+    mobileScreenshotUrl: string | null
     colorScheme: string | null
     niche: string | null
     slug: string | null
@@ -882,8 +882,8 @@ export namespace Prisma {
     title: number
     description: number
     websiteLink: number
-    desktopScreenshot: number
-    mobileScreenshot: number
+    desktopScreenshotUrl: number
+    mobileScreenshotUrl: number
     colorScheme: number
     fonts: number
     techStack: number
@@ -912,8 +912,8 @@ export namespace Prisma {
     title?: true
     description?: true
     websiteLink?: true
-    desktopScreenshot?: true
-    mobileScreenshot?: true
+    desktopScreenshotUrl?: true
+    mobileScreenshotUrl?: true
     colorScheme?: true
     niche?: true
     slug?: true
@@ -929,8 +929,8 @@ export namespace Prisma {
     title?: true
     description?: true
     websiteLink?: true
-    desktopScreenshot?: true
-    mobileScreenshot?: true
+    desktopScreenshotUrl?: true
+    mobileScreenshotUrl?: true
     colorScheme?: true
     niche?: true
     slug?: true
@@ -946,8 +946,8 @@ export namespace Prisma {
     title?: true
     description?: true
     websiteLink?: true
-    desktopScreenshot?: true
-    mobileScreenshot?: true
+    desktopScreenshotUrl?: true
+    mobileScreenshotUrl?: true
     colorScheme?: true
     fonts?: true
     techStack?: true
@@ -1053,8 +1053,8 @@ export namespace Prisma {
     title: string
     description: string
     websiteLink: string
-    desktopScreenshot: string | null
-    mobileScreenshot: string | null
+    desktopScreenshotUrl: string | null
+    mobileScreenshotUrl: string | null
     colorScheme: string | null
     fonts: string[]
     techStack: string[]
@@ -1092,8 +1092,8 @@ export namespace Prisma {
     title?: boolean
     description?: boolean
     websiteLink?: boolean
-    desktopScreenshot?: boolean
-    mobileScreenshot?: boolean
+    desktopScreenshotUrl?: boolean
+    mobileScreenshotUrl?: boolean
     colorScheme?: boolean
     fonts?: boolean
     techStack?: boolean
@@ -1114,8 +1114,8 @@ export namespace Prisma {
     title?: boolean
     description?: boolean
     websiteLink?: boolean
-    desktopScreenshot?: boolean
-    mobileScreenshot?: boolean
+    desktopScreenshotUrl?: boolean
+    mobileScreenshotUrl?: boolean
     colorScheme?: boolean
     fonts?: boolean
     techStack?: boolean
@@ -1129,7 +1129,7 @@ export namespace Prisma {
     updatedAt?: boolean
   }
 
-  export type InspirationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "websiteLink" | "desktopScreenshot" | "mobileScreenshot" | "colorScheme" | "fonts" | "techStack" | "categories" | "niche" | "slug" | "metaTitle" | "metaDescription" | "pageViews" | "createdAt" | "updatedAt", ExtArgs["result"]["inspiration"]>
+  export type InspirationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "websiteLink" | "desktopScreenshotUrl" | "mobileScreenshotUrl" | "colorScheme" | "fonts" | "techStack" | "categories" | "niche" | "slug" | "metaTitle" | "metaDescription" | "pageViews" | "createdAt" | "updatedAt", ExtArgs["result"]["inspiration"]>
 
   export type $InspirationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Inspiration"
@@ -1139,8 +1139,8 @@ export namespace Prisma {
       title: string
       description: string
       websiteLink: string
-      desktopScreenshot: string | null
-      mobileScreenshot: string | null
+      desktopScreenshotUrl: string | null
+      mobileScreenshotUrl: string | null
       colorScheme: string | null
       fonts: string[]
       techStack: string[]
@@ -1548,8 +1548,8 @@ export namespace Prisma {
     readonly title: FieldRef<"Inspiration", 'String'>
     readonly description: FieldRef<"Inspiration", 'String'>
     readonly websiteLink: FieldRef<"Inspiration", 'String'>
-    readonly desktopScreenshot: FieldRef<"Inspiration", 'String'>
-    readonly mobileScreenshot: FieldRef<"Inspiration", 'String'>
+    readonly desktopScreenshotUrl: FieldRef<"Inspiration", 'String'>
+    readonly mobileScreenshotUrl: FieldRef<"Inspiration", 'String'>
     readonly colorScheme: FieldRef<"Inspiration", 'String'>
     readonly fonts: FieldRef<"Inspiration", 'String[]'>
     readonly techStack: FieldRef<"Inspiration", 'String[]'>
@@ -1918,8 +1918,8 @@ export namespace Prisma {
     title: 'title',
     description: 'description',
     websiteLink: 'websiteLink',
-    desktopScreenshot: 'desktopScreenshot',
-    mobileScreenshot: 'mobileScreenshot',
+    desktopScreenshotUrl: 'desktopScreenshotUrl',
+    mobileScreenshotUrl: 'mobileScreenshotUrl',
     colorScheme: 'colorScheme',
     fonts: 'fonts',
     techStack: 'techStack',
@@ -2024,8 +2024,8 @@ export namespace Prisma {
     title?: StringFilter<"Inspiration"> | string
     description?: StringFilter<"Inspiration"> | string
     websiteLink?: StringFilter<"Inspiration"> | string
-    desktopScreenshot?: StringNullableFilter<"Inspiration"> | string | null
-    mobileScreenshot?: StringNullableFilter<"Inspiration"> | string | null
+    desktopScreenshotUrl?: StringNullableFilter<"Inspiration"> | string | null
+    mobileScreenshotUrl?: StringNullableFilter<"Inspiration"> | string | null
     colorScheme?: StringNullableFilter<"Inspiration"> | string | null
     fonts?: StringNullableListFilter<"Inspiration">
     techStack?: StringNullableListFilter<"Inspiration">
@@ -2044,8 +2044,8 @@ export namespace Prisma {
     title?: SortOrder
     description?: SortOrder
     websiteLink?: SortOrder
-    desktopScreenshot?: SortOrder
-    mobileScreenshot?: SortOrder
+    desktopScreenshotUrl?: SortOrder
+    mobileScreenshotUrl?: SortOrder
     colorScheme?: SortOrder
     fonts?: SortOrder
     techStack?: SortOrder
@@ -2068,8 +2068,8 @@ export namespace Prisma {
     title?: StringFilter<"Inspiration"> | string
     description?: StringFilter<"Inspiration"> | string
     websiteLink?: StringFilter<"Inspiration"> | string
-    desktopScreenshot?: StringNullableFilter<"Inspiration"> | string | null
-    mobileScreenshot?: StringNullableFilter<"Inspiration"> | string | null
+    desktopScreenshotUrl?: StringNullableFilter<"Inspiration"> | string | null
+    mobileScreenshotUrl?: StringNullableFilter<"Inspiration"> | string | null
     colorScheme?: StringNullableFilter<"Inspiration"> | string | null
     fonts?: StringNullableListFilter<"Inspiration">
     techStack?: StringNullableListFilter<"Inspiration">
@@ -2087,8 +2087,8 @@ export namespace Prisma {
     title?: SortOrder
     description?: SortOrder
     websiteLink?: SortOrder
-    desktopScreenshot?: SortOrder
-    mobileScreenshot?: SortOrder
+    desktopScreenshotUrl?: SortOrder
+    mobileScreenshotUrl?: SortOrder
     colorScheme?: SortOrder
     fonts?: SortOrder
     techStack?: SortOrder
@@ -2115,8 +2115,8 @@ export namespace Prisma {
     title?: StringWithAggregatesFilter<"Inspiration"> | string
     description?: StringWithAggregatesFilter<"Inspiration"> | string
     websiteLink?: StringWithAggregatesFilter<"Inspiration"> | string
-    desktopScreenshot?: StringNullableWithAggregatesFilter<"Inspiration"> | string | null
-    mobileScreenshot?: StringNullableWithAggregatesFilter<"Inspiration"> | string | null
+    desktopScreenshotUrl?: StringNullableWithAggregatesFilter<"Inspiration"> | string | null
+    mobileScreenshotUrl?: StringNullableWithAggregatesFilter<"Inspiration"> | string | null
     colorScheme?: StringNullableWithAggregatesFilter<"Inspiration"> | string | null
     fonts?: StringNullableListFilter<"Inspiration">
     techStack?: StringNullableListFilter<"Inspiration">
@@ -2135,8 +2135,8 @@ export namespace Prisma {
     title: string
     description: string
     websiteLink: string
-    desktopScreenshot?: string | null
-    mobileScreenshot?: string | null
+    desktopScreenshotUrl?: string | null
+    mobileScreenshotUrl?: string | null
     colorScheme?: string | null
     fonts?: InspirationCreatefontsInput | string[]
     techStack?: InspirationCreatetechStackInput | string[]
@@ -2155,8 +2155,8 @@ export namespace Prisma {
     title: string
     description: string
     websiteLink: string
-    desktopScreenshot?: string | null
-    mobileScreenshot?: string | null
+    desktopScreenshotUrl?: string | null
+    mobileScreenshotUrl?: string | null
     colorScheme?: string | null
     fonts?: InspirationCreatefontsInput | string[]
     techStack?: InspirationCreatetechStackInput | string[]
@@ -2174,8 +2174,8 @@ export namespace Prisma {
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     websiteLink?: StringFieldUpdateOperationsInput | string
-    desktopScreenshot?: NullableStringFieldUpdateOperationsInput | string | null
-    mobileScreenshot?: NullableStringFieldUpdateOperationsInput | string | null
+    desktopScreenshotUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    mobileScreenshotUrl?: NullableStringFieldUpdateOperationsInput | string | null
     colorScheme?: NullableStringFieldUpdateOperationsInput | string | null
     fonts?: InspirationUpdatefontsInput | string[]
     techStack?: InspirationUpdatetechStackInput | string[]
@@ -2193,8 +2193,8 @@ export namespace Prisma {
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     websiteLink?: StringFieldUpdateOperationsInput | string
-    desktopScreenshot?: NullableStringFieldUpdateOperationsInput | string | null
-    mobileScreenshot?: NullableStringFieldUpdateOperationsInput | string | null
+    desktopScreenshotUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    mobileScreenshotUrl?: NullableStringFieldUpdateOperationsInput | string | null
     colorScheme?: NullableStringFieldUpdateOperationsInput | string | null
     fonts?: InspirationUpdatefontsInput | string[]
     techStack?: InspirationUpdatetechStackInput | string[]
@@ -2213,8 +2213,8 @@ export namespace Prisma {
     title: string
     description: string
     websiteLink: string
-    desktopScreenshot?: string | null
-    mobileScreenshot?: string | null
+    desktopScreenshotUrl?: string | null
+    mobileScreenshotUrl?: string | null
     colorScheme?: string | null
     fonts?: InspirationCreatefontsInput | string[]
     techStack?: InspirationCreatetechStackInput | string[]
@@ -2232,8 +2232,8 @@ export namespace Prisma {
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     websiteLink?: StringFieldUpdateOperationsInput | string
-    desktopScreenshot?: NullableStringFieldUpdateOperationsInput | string | null
-    mobileScreenshot?: NullableStringFieldUpdateOperationsInput | string | null
+    desktopScreenshotUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    mobileScreenshotUrl?: NullableStringFieldUpdateOperationsInput | string | null
     colorScheme?: NullableStringFieldUpdateOperationsInput | string | null
     fonts?: InspirationUpdatefontsInput | string[]
     techStack?: InspirationUpdatetechStackInput | string[]
@@ -2251,8 +2251,8 @@ export namespace Prisma {
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     websiteLink?: StringFieldUpdateOperationsInput | string
-    desktopScreenshot?: NullableStringFieldUpdateOperationsInput | string | null
-    mobileScreenshot?: NullableStringFieldUpdateOperationsInput | string | null
+    desktopScreenshotUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    mobileScreenshotUrl?: NullableStringFieldUpdateOperationsInput | string | null
     colorScheme?: NullableStringFieldUpdateOperationsInput | string | null
     fonts?: InspirationUpdatefontsInput | string[]
     techStack?: InspirationUpdatetechStackInput | string[]
@@ -2332,8 +2332,8 @@ export namespace Prisma {
     title?: SortOrder
     description?: SortOrder
     websiteLink?: SortOrder
-    desktopScreenshot?: SortOrder
-    mobileScreenshot?: SortOrder
+    desktopScreenshotUrl?: SortOrder
+    mobileScreenshotUrl?: SortOrder
     colorScheme?: SortOrder
     fonts?: SortOrder
     techStack?: SortOrder
@@ -2356,8 +2356,8 @@ export namespace Prisma {
     title?: SortOrder
     description?: SortOrder
     websiteLink?: SortOrder
-    desktopScreenshot?: SortOrder
-    mobileScreenshot?: SortOrder
+    desktopScreenshotUrl?: SortOrder
+    mobileScreenshotUrl?: SortOrder
     colorScheme?: SortOrder
     niche?: SortOrder
     slug?: SortOrder
@@ -2373,8 +2373,8 @@ export namespace Prisma {
     title?: SortOrder
     description?: SortOrder
     websiteLink?: SortOrder
-    desktopScreenshot?: SortOrder
-    mobileScreenshot?: SortOrder
+    desktopScreenshotUrl?: SortOrder
+    mobileScreenshotUrl?: SortOrder
     colorScheme?: SortOrder
     niche?: SortOrder
     slug?: SortOrder

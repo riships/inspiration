@@ -32,7 +32,7 @@ export const createInspirationController = async (req, res) => {
 
         return res.status(201).json(createdInspiration);
     } catch (error) {
-        console.error("Error creating inspiration:", error);
-        return res.status(500).json({ error: error || "Internal server error." });
+        console.error("Error creating inspiration:", error.message);
+        return res.status(500).json({ error: error.message || "Internal server error." });
     }
 }

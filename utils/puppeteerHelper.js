@@ -12,6 +12,8 @@ async function extractInternalLinks(url) {
                 '--disable-dev-shm-usage',
                 '--disable-gpu',
                 '--window-size=1920x1080',
+                '--disable-features=IsolateOrigins,site-per-process',
+                '--disable-web-security'
             ],
             defaultViewport: {
                 width: 1920,
@@ -69,30 +71,31 @@ async function extractDetailsWithTheUrl(url) {
         }
 
         const page = await browser.newPage();
-        await page.goto(url, { waitUntil: 'networkidle0' });
+        await page.goto(url, { waitUntil: 'networkidle2' });
 
         // Extract details from the page (e.g., title, description)
         const details = await page.evaluate(() => {
-            const title = document.title;
-            const description = document.querySelector('meta[name="description"]')?.content || '';
+            const metaDescription = document.querySelector('meta[name="description"]')?.content || '';
 
             return {
-                title,
-                description,
+                title: document.title,
+                description: metaDescription,
                 websiteLink: window.location.href,
-                colorScheme: getComputedStyle(document.body).backgroundColor,
-                fontFamily: getComputedStyle(document.body).fontFamily,
-                techStack: Array.from(document.querySelectorAll('script[src]')).map(script => {
-                    script.src = script.src.replace(/.*\//, ''); // Remove the domain part
-                    return script.src.split('/').pop(); // Get the last part of the URL
-                }
-                ).filter(src => src && !src.includes('http')).slice(0, 5), // Limit to 5 scripts
-                catergories: Array.from(document.querySelectorAll('meta[name="keywords"]')).map(meta => meta.content).join(', '),
-                niche: Array.from(document.querySelectorAll('meta[name="keywords"]')).map(meta => meta.content).join(', '),
-                tags: Array.from(document.querySelectorAll('meta[name="keywords"]')).map(meta => meta.content).join(', '),
-                slug: window.location.pathname.split('/').pop(), // Get the last part of the URL path
+                colorScheme: getComputedStyle(document.documentElement).getPropertyValue('--background-color') || getComputedStyle(document.body).backgroundColor,
+                techStack: Array.from(document.querySelectorAll('script[src]'))
+                    .map(script => script.src.split('/').pop())
+                    .filter(src => src && !src.startsWith('chunk-'))
+                    .slice(0, 5),
+                categories: Array.from(document.querySelectorAll('meta[name="keywords"]'))
+                    .flatMap(meta => meta.content.split(','))
+                    .map(keyword => keyword.trim())
+                    .filter(Boolean),
+                niche: Array.from(document.querySelectorAll('meta[name="keywords"]'))
+                    .map(meta => meta.content)
+                    .join(', '),
+                slug: window.location.pathname.replace(/\/$/, '').split('/').pop(),
                 metaTitle: document.querySelector('meta[name="title"]')?.content || '',
-                metaDescription: document.querySelector('meta[name="description"]')?.content || '',
+                metaDescription: metaDescription,
                 pageViews: document.querySelector('meta[name="pageviews"]')?.content || 0,
             };
         });
