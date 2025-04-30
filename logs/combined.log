@@ -16,3 +16,64 @@
 {"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T09:02:29.763Z","url":"/api/inspirations"}
 {"level":"info","message":"[2025-04-30T09:03:36.882Z] POST /api/inspirations","timestamp":"2025-04-30T09:03:36.883Z"}
 {"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T09:03:40.724Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T14:35:30.866Z] POST /api/extract-links","timestamp":"2025-04-30T14:35:30.867Z"}
+{"level":"error","message":"Failed to extract links: Timed out after 30000 ms while waiting for the WS endpoint URL to appear in stdout!","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T14:36:10.624Z","url":"/api/extract-links"}
+{"level":"info","message":"[2025-04-30T14:36:27.308Z] POST /api/extract-links","timestamp":"2025-04-30T14:36:27.308Z"}
+{"level":"info","message":"[2025-04-30T14:36:57.387Z] POST /api/inspirations","timestamp":"2025-04-30T14:36:57.387Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T14:37:05.278Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T14:41:55.348Z] POST /api/inspirations","timestamp":"2025-04-30T14:41:55.348Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T14:41:58.841Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:32:33.617Z] POST /api/inspirations","timestamp":"2025-04-30T15:32:33.617Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T15:32:36.372Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:42:17.126Z] POST /api/inspirations","timestamp":"2025-04-30T15:42:17.127Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T15:42:20.835Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:46:22.160Z] POST /api/inspirations","timestamp":"2025-04-30T15:46:22.160Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T15:46:26.228Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:47:03.951Z] POST /api/inspirations","timestamp":"2025-04-30T15:47:03.951Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T15:47:07.480Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:47:32.528Z] POST /api/inspirations","timestamp":"2025-04-30T15:47:32.528Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T15:47:38.744Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:48:34.500Z] POST /api/inspirations","timestamp":"2025-04-30T15:48:34.501Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T15:48:47.898Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:49:33.763Z] POST /api/inspirations","timestamp":"2025-04-30T15:49:33.764Z"}
+{"level":"info","message":"[2025-04-30T15:49:59.075Z] POST /api/inspirations","timestamp":"2025-04-30T15:49:59.076Z"}
+{"level":"info","message":"[2025-04-30T15:50:08.985Z] POST /api/inspirations","timestamp":"2025-04-30T15:50:08.986Z"}
+{"level":"info","message":"[2025-04-30T15:51:30.675Z] POST /api/inspirations","timestamp":"2025-04-30T15:51:30.675Z"}
+{"level":"info","message":"[2025-04-30T15:51:51.318Z] POST /api/inspirations","timestamp":"2025-04-30T15:51:51.318Z"}
+{"level":"info","message":"[2025-04-30T15:52:41.754Z] POST /api/inspirations","timestamp":"2025-04-30T15:52:41.754Z"}
+{"level":"info","message":"[2025-04-30T15:53:11.220Z] GET /api/inspirations","timestamp":"2025-04-30T15:53:11.220Z"}
+{"level":"error","message":"An error occurred while fetching the inspiration.","method":"GET","status":"error","statusCode":500,"timestamp":"2025-04-30T15:53:11.221Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:54:15.768Z] GET /api/inspirations","timestamp":"2025-04-30T15:54:15.770Z"}
+{"level":"error","message":"An error occurred while fetching the inspiration.","method":"GET","status":"error","statusCode":500,"timestamp":"2025-04-30T15:54:15.772Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:54:26.571Z] GET /api/inspirations","timestamp":"2025-04-30T15:54:26.571Z"}
+{"level":"error","message":"An error occurred while fetching the inspiration.","method":"GET","status":"error","statusCode":500,"timestamp":"2025-04-30T15:54:26.572Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:54:56.507Z] GET /api/inspirations","timestamp":"2025-04-30T15:54:56.508Z"}
+{"level":"error","message":"An error occurred while fetching the inspiration.","method":"GET","status":"error","statusCode":500,"timestamp":"2025-04-30T15:54:57.045Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:55:12.445Z] GET /api/inspirations","timestamp":"2025-04-30T15:55:12.446Z"}
+{"level":"error","message":"An error occurred while fetching the inspiration.","method":"GET","status":"error","statusCode":500,"timestamp":"2025-04-30T15:55:12.979Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:56:09.025Z] GET /api/inspirations","timestamp":"2025-04-30T15:56:09.027Z"}
+{"level":"error","message":"An error occurred while fetching the inspiration.","method":"GET","status":"error","statusCode":500,"timestamp":"2025-04-30T15:56:09.583Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:56:27.315Z] GET /api/inspirations","timestamp":"2025-04-30T15:56:27.315Z"}
+{"level":"error","message":"An error occurred while fetching the inspiration.","method":"GET","status":"error","statusCode":500,"timestamp":"2025-04-30T15:56:27.851Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:56:57.023Z] GET /api/inspirations","timestamp":"2025-04-30T15:56:57.024Z"}
+{"level":"error","message":"TypeError: inspiration.slice is not a function","method":"GET","status":"error","statusCode":500,"timestamp":"2025-04-30T15:56:57.559Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:57:33.197Z] GET /api/inspirations","timestamp":"2025-04-30T15:57:33.198Z"}
+{"level":"error","message":"ReferenceError: response is not defined","method":"GET","status":"error","statusCode":500,"timestamp":"2025-04-30T15:57:33.739Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:58:20.658Z] GET /api/inspirations","timestamp":"2025-04-30T15:58:20.659Z"}
+{"level":"error","message":"ReferenceError: response is not defined","method":"GET","status":"error","statusCode":500,"timestamp":"2025-04-30T15:58:21.205Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T15:58:58.420Z] GET /api/inspirations","timestamp":"2025-04-30T15:58:58.421Z"}
+{"level":"info","message":"[2025-04-30T15:59:11.324Z] GET /school_mobile_app__school_mobile_app_india__edunext_technologies_desktop.png","timestamp":"2025-04-30T15:59:11.324Z"}
+{"level":"info","message":"[2025-04-30T15:59:53.950Z] GET /favicon.ico","timestamp":"2025-04-30T15:59:53.950Z"}
+{"level":"info","message":"[2025-04-30T16:00:37.074Z] GET /api/inspirations","timestamp":"2025-04-30T16:00:37.075Z"}
+{"level":"info","message":"[2025-04-30T16:01:05.699Z] GET /api/inspirations/school-mobile-app.php","timestamp":"2025-04-30T16:01:05.699Z"}
+{"level":"info","message":"[2025-04-30T16:01:55.516Z] POST /api/inspirations","timestamp":"2025-04-30T16:01:55.516Z"}
+{"level":"info","message":"[2025-04-30T16:06:32.830Z] GET /api/inspirations/school-mobile-app.php","timestamp":"2025-04-30T16:06:32.830Z"}
+{"level":"info","message":"[2025-04-30T16:06:39.903Z] GET /api/inspirations","timestamp":"2025-04-30T16:06:39.903Z"}
+{"level":"info","message":"[2025-04-30T16:07:25.482Z] GET /api/inspirations?page=2&limit=20","timestamp":"2025-04-30T16:07:25.482Z"}
+{"level":"info","message":"[2025-04-30T16:35:36.576Z] POST /api/extract-links","timestamp":"2025-04-30T16:35:36.577Z"}
+{"level":"info","message":"[2025-04-30T16:36:13.374Z] GET /api/inspirations?page=1&limit=10","timestamp":"2025-04-30T16:36:13.374Z"}
+{"level":"info","message":"[2025-04-30T16:36:40.909Z] POST /api/extract-links","timestamp":"2025-04-30T16:36:40.909Z"}
+{"level":"info","message":"[2025-04-30T16:36:52.726Z] POST /api/inspirations","timestamp":"2025-04-30T16:36:52.726Z"}
+{"level":"info","message":"[2025-04-30T16:37:10.143Z] GET /api/inspirations?page=1&limit=10","timestamp":"2025-04-30T16:37:10.143Z"}
+{"level":"info","message":"[2025-04-30T16:37:10.164Z] GET /api/inspirations","timestamp":"2025-04-30T16:37:10.165Z"}
+{"level":"info","message":"[2025-04-30T16:38:50.342Z] GET /api/inspirations/school-mobile-app.php","timestamp":"2025-04-30T16:38:50.342Z"}

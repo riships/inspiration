@@ -38,9 +38,10 @@ export const getInspiration = async () => {
                 createdAt: 'desc',
             },
         });
-        return { success: true, data: inspirations };
+
+        return inspirations;
     } catch (error) {
-        return { success: false, message: 'An error occurred while fetching inspirations', error: error.message || error };
+        return { success: false, error: error.message || error };
     }
 }
 export const getInspirationBySlug = async (slug) => {
@@ -55,6 +56,6 @@ export const getInspirationBySlug = async (slug) => {
         }
         return { success: true, data: inspiration };
     } catch (error) {
-        return { success: false, message: 'An error occurred while fetching the inspiration', error: error.message || error };
+        return { success: false, error: error.message || error };
     }
 }

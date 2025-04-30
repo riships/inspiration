@@ -5,6 +5,7 @@ import errorHandler from './middleware/errorHandler.js';
 import requestLogger from './middleware/requestLogger.js';
 
 const app = express();
+app.use(express.static('uploads'));
 app.use(express.json());
 app.use(urlencoded({ extended: true }));
 app.use(requestLogger);

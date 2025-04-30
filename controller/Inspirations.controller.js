@@ -14,11 +14,7 @@ export const createInspirationController = async (req, res, next) => {
             const extractedData = await extractDetailsWithTheUrl(url);
             if (extractedData) {
                 let inpiration = await createInspiration(extractedData);
-                if (inpiration && inpiration.success) {
-                    data.push(inpiration.data);
-                } else {
-                    return next(new AppError(`Failed to create inspiration for URL: ${url}. Error: ${inpiration.message}`, 500));
-                }
+                data.push(inpiration);
             }
         }
         if (data.length === 0) {
@@ -26,17 +22,14 @@ export const createInspirationController = async (req, res, next) => {
         }
         return res.status(201).json(data);
     } catch (error) {
-        return next(new AppError("An error occurred while creating inspirations.", 500));
+        return next(new AppError(error, 500));
     }
 }
 
 export const getAllInspirationsController = async (req, res, next) => {
     try {
         const { page = 1, limit = 10 } = req.query;
-        if (!slug) {
-            return next(new AppError("Please provide a slug.", 400));
-        }
-        const inspiration = await getInspiration(slug);
+        const inspiration = await getInspiration();
         if (!inspiration) {
             return next(new AppError("Inspiration not found.", 404));
         }
@@ -55,7 +48,7 @@ export const getAllInspirationsController = async (req, res, next) => {
         };
         return res.status(200).json(response);
     } catch (error) {
-        return next(new AppError("An error occurred while fetching the inspiration.", 500));
+        return next(new AppError(error, 500));
     }
 }
 
@@ -71,6 +64,6 @@ export const getInspirationsController = async (req, res, next) => {
         }
         return res.status(200).json(inspiration);
     } catch (error) {
-        return next(new AppError("An error occurred while fetching the inspirations.", 500));
+        return next(new AppError(error, 500));
     }
 }
