@@ -1,12 +1,12 @@
 import { extractDetailsWithTheUrl } from "../utils/puppeteerHelper.js";
-import { createInspiration } from "../services/InspirationService.js";
-import logger from "../utils/winston.logger.js";
+import { createInspiration, getInspiration, getInspirationBySlug } from "../services/InspirationService.js";
+import AppError from "../utils/AppError.js";
 
-export const createInspirationController = async (req, res) => {
+export const createInspirationController = async (req, res, next) => {
     try {
         const { urls } = req.body;
         if (!urls || !Array.isArray(urls) || urls.length === 0) {
-            return res.status(400).json({ message: "Invalid input. Please provide an array of URLs." });
+            return next(new AppError("Please provide an array of URLs.", 400));
         }
 
         let data = [];
@@ -15,22 +15,62 @@ export const createInspirationController = async (req, res) => {
             if (extractedData) {
                 let inpiration = await createInspiration(extractedData);
                 if (inpiration && inpiration.success) {
-                    logger.log('info', `Inspiration created successfully for URL: ${url}`);
                     data.push(inpiration.data);
                 } else {
-                    logger.log('error', `Failed to create inspiration for URL: ${url}. Error: ${inpiration.message}`);
-                    return res.status(400).json({ message: inpiration.message || "Failed to create inspiration." });
+                    return next(new AppError(`Failed to create inspiration for URL: ${url}. Error: ${inpiration.message}`, 500));
                 }
             }
         }
-        // Check if data is empty after processing all URLs
         if (data.length === 0) {
-            return res.status(400).json({ message: "No valid data extracted from the provided URLs." });
+            next(new AppError("No valid data found to create inspirations.", 400));
         }
-        
         return res.status(201).json(data);
     } catch (error) {
-        console.error("Error creating inspiration:", error.message);
-        return res.status(500).json({ error: error.message || "Internal server error." });
+        return next(new AppError("An error occurred while creating inspirations.", 500));
+    }
+}
+
+export const getAllInspirationsController = async (req, res, next) => {
+    try {
+        const { page = 1, limit = 10 } = req.query;
+        if (!slug) {
+            return next(new AppError("Please provide a slug.", 400));
+        }
+        const inspiration = await getInspiration(slug);
+        if (!inspiration) {
+            return next(new AppError("Inspiration not found.", 404));
+        }
+
+        const pageNumber = parseInt(page, 10) || 1;
+        const limitNumber = parseInt(limit, 10) || 10;
+        const startIndex = (pageNumber - 1) * limitNumber;
+        const endIndex = pageNumber * limitNumber;
+        const paginatedInspiration = inspiration.slice(startIndex, endIndex);
+        const totalPages = Math.ceil(inspiration.length / limitNumber);
+        const response = {
+            totalPages,
+            currentPage: pageNumber,
+            limit: limitNumber,
+            inspirations: paginatedInspiration,
+        };
+        return res.status(200).json(response);
+    } catch (error) {
+        return next(new AppError("An error occurred while fetching the inspiration.", 500));
+    }
+}
+
+export const getInspirationsController = async (req, res, next) => {
+    try {
+        const { slug } = req.params;
+        if (!slug) {
+            return next(new AppError("Please provide a slug.", 400));
+        }
+        const inspiration = await getInspirationBySlug(slug);
+        if (!inspiration) {
+            return next(new AppError("Inspiration not found.", 404));
+        }
+        return res.status(200).json(inspiration);
+    } catch (error) {
+        return next(new AppError("An error occurred while fetching the inspirations.", 500));
     }
 }

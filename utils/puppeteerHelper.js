@@ -1,4 +1,6 @@
 import puppeteer from 'puppeteer';
+import fs from 'fs';
+import path from 'path';
 
 let browser; // Global browser instance
 
@@ -102,9 +104,17 @@ async function extractDetailsWithTheUrl(url) {
 
         let sanitizedTitle = details.title.toLowerCase().replace(/\s+/g, "_").replace(/[^\w-]+/g, "");
 
+        // unsure about the path to save the screenshots, so using a relative path for now
+        const uploadsDir = path.join(process.cwd(), 'uploads'); // Adjust this path as needed
+        if (!fs.existsSync(uploadsDir)) {
+            fs.mkdirSync(uploadsDir, { recursive: true });
+        }
+    
+
         // Generate absolute paths for the desktop and mobile screenshots
-        let absolutePathForDesktopScreenshot = `uploads/${sanitizedTitle}_desktop.png`;
-        let absolutePathForMobileScreenshot = `uploads/${sanitizedTitle}_mobile.png`;
+        let absolutePathForDesktopScreenshot = `${uploadsDir}/${sanitizedTitle}_desktop.png`;
+        let absolutePathForMobileScreenshot = `${uploadsDir}/${sanitizedTitle}_mobile.png`;
+        
         // Take a screenshot of the desktop view
         await page.setViewport({ width: 1920, height: 1080 }); // Desktop view
         await page.screenshot({ path: absolutePathForDesktopScreenshot });

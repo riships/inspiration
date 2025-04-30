@@ -4,7 +4,7 @@ export const createInspiration = async (data) => {
     try {
         // Validate the data before creating
         if (!data) {
-            return { success: false, message: 'Data is required' };
+            errorHandler('Data is required');
         }
 
         if (!data.title) {
@@ -30,3 +30,31 @@ export const createInspiration = async (data) => {
         return { success: false, message: 'An error occurred while creating inspiration', error: error.message || error };
     }
 };
+
+export const getInspiration = async () => {
+    try {
+        const inspirations = await prisma.inspiration.findMany({
+            orderBy: {
+                createdAt: 'desc',
+            },
+        });
+        return { success: true, data: inspirations };
+    } catch (error) {
+        return { success: false, message: 'An error occurred while fetching inspirations', error: error.message || error };
+    }
+}
+export const getInspirationBySlug = async (slug) => {
+    try {
+        const inspiration = await prisma.inspiration.findUnique({
+            where: {
+                slug,
+            },
+        });
+        if (!inspiration) {
+            return { success: false, message: 'Inspiration not found' };
+        }
+        return { success: true, data: inspiration };
+    } catch (error) {
+        return { success: false, message: 'An error occurred while fetching the inspiration', error: error.message || error };
+    }
+}

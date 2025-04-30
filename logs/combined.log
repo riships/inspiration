@@ -1,0 +1,18 @@
+{"level":"info","message":"[2025-04-30T08:20:02.415Z] POST /api/extract-links","timestamp":"2025-04-30T08:20:02.416Z"}
+{"level":"info","message":"[2025-04-30T08:20:30.471Z] POST /api/extract-links","timestamp":"2025-04-30T08:20:30.473Z"}
+{"level":"info","message":"[2025-04-30T08:23:43.781Z] POST /api/inspirations","timestamp":"2025-04-30T08:23:43.782Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T08:23:46.899Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T08:30:14.255Z] POST /api/inspirations","timestamp":"2025-04-30T08:30:14.256Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T08:30:18.064Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T08:32:44.935Z] POST /api/inspirations","timestamp":"2025-04-30T08:32:44.936Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T08:32:48.943Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T09:00:19.804Z] POST /api/inspirations","timestamp":"2025-04-30T09:00:19.805Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: Title is required","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T09:00:23.495Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T09:00:46.833Z] POST /api/inspirations","timestamp":"2025-04-30T09:00:46.833Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: Title is required","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T09:00:49.618Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T09:01:59.025Z] POST /api/inspirations","timestamp":"2025-04-30T09:01:59.026Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T09:02:02.559Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T09:02:26.099Z] POST /api/inspirations","timestamp":"2025-04-30T09:02:26.100Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T09:02:29.763Z","url":"/api/inspirations"}
+{"level":"info","message":"[2025-04-30T09:03:36.882Z] POST /api/inspirations","timestamp":"2025-04-30T09:03:36.883Z"}
+{"level":"error","message":"Failed to create inspiration for URL: https://edunexttechnologies.com/reach-us.php. Error: An error occurred while creating inspiration","method":"POST","status":"error","statusCode":500,"timestamp":"2025-04-30T09:03:40.724Z","url":"/api/inspirations"}
